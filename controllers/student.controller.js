@@ -53,7 +53,7 @@ exports.findAll = (req, res) => {
 // Delete a Student with the specified id in the request
 exports.delete = (req, res) => {
   const id = req.params.id;
-  Student.findByIdAndRemove(id)
+  Student.findByIdAndDelete(id)
     .then(data => {
       if (!data) {
         res.status(404).send({
