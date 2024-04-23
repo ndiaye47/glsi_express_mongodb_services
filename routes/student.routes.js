@@ -10,3 +10,8 @@ module.exports = app => {
 
   app.use("/api/students", router);
 };
+
+// Delete a Student with id
+router.delete("/:id", students.delete);
+// Delete all students
+  router.delete("/", students.deleteAll);
